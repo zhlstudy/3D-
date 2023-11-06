@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="css/3d.css"/>
+		<title>3D 立方体</title>
+	</head>
+	<body>
+		
+		
+		<div class="wrap">
+			<span class="in-front"><img src="img/1.jpg" ></span>
+			<span class="in-back"><img src="img/2.jpg" ></span>
+			<span class="in-left"><img src="img/1.jpg" ></span>
+			<span class="in-right"><img src="img/2.jpg" ></span>
+			<span class="in-top"><img src="img/1.jpg" ></span>
+			<span class="in-bottom"><img src="img/2.jpg" ></span>			
+			<div class="uot-front"><img src="img/1.jpg" ></div>
+			<div class="uot-back"><img src="img/2.jpg" ></div>
+			<div class="uot-left"><img src="img/1.jpg" ></div>
+			<div class="uot-right"><img src="img/2.jpg" ></div>
+			<div class="uot-top"><img src="img/1.jpg" ></div>
+			<div class="uot-bottom"><img src="img/2.jpg" ></div>
+			
+		</div>
+		
+		
+		<script >
+		    function rand(m,n){
+				return Math.ceil(Math.random() * (n-m+1)) + m-1;
+			}    
+		    //光线总数
+			let num = 50;
+			//循环
+			for(let i=0;i<num;i++){
+				//创建 i 元素
+				const i = document.createElement('i');
+				//设置格式
+				i.style.height = rand(30,10) + 'px';
+				i.style.left = rand(1,99) + 'vw';
+				//随机动画周期
+				i.style.animationDuration = rand(5,30)/10 + 's';//0.5 到3
+				//将 i 插入到 html  元素中
+				document.querySelector('html').appendChild(i);
+				
+			}
+		</script>
+		
+	</body>
+</html>

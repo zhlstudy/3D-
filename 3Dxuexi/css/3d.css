@@ -1,0 +1,126 @@
+html{
+	background-color:lavenderblush;
+}
+.wrap span{
+	/* 设置块级元素*/
+	display: block;
+	width: 100px;
+	height: 100px;
+	background-color: burlywood;
+	position: absolute;
+	top: 50px;
+	left: 50px;
+}
+
+.wrap{
+	width: 200px;
+	height: 200px;
+	margin: 300px auto;
+	animation: rotate 20s infinite;
+	/*设置 在3D空间展现*/
+	transform-style: preserve-3d;
+}
+
+.wrap span img{
+	width: 100px;
+	height: 100px;
+}
+.wrap div img{
+	width: 200px;
+	height: 200px;
+}
+
+
+.in-front{
+	transform: translateZ(50px);
+}
+.in-back{
+	transform: translateZ(-50px);
+}
+.in-left{
+	transform: rotateY(90deg) translateZ(50px);
+}
+.in-right{
+	transform: rotateY(-90deg) translateZ(50px);
+}
+.in-top{
+	transform: rotateX(90deg) translateZ(50px);
+}
+.in-bottom{
+	transform: rotateX(-90deg) translateZ(50px);
+}
+
+@keyframes rotate{
+	from{
+		transform: rotateX(0deg) rotateY(0deg);
+	}
+	to{
+		transform: rotateX(360deg) rotateY(360deg);
+	}
+}
+
+
+
+.wrap div{
+	width: 200px;
+	height: 200px;
+	background-color: red;
+	position: absolute;
+	transition: all 0.5s;
+}
+.uot-front{
+	transform: translateZ(100px);
+}
+.uot-back{
+	transform: translateZ(-100px);
+}
+.uot-left{
+	transform: rotateY(90deg) translateZ(100px);
+}
+.uot-right{
+	transform: rotateY(-90deg) translateZ(100px);
+}
+.uot-top{
+	transform: rotateX(90deg) translateZ(100px);
+}
+.uot-bottom{
+	transform: rotateX(-90deg) translateZ(100px);
+}
+
+
+.wrap:hover .uot-front{
+	transform: translateZ(200px);
+}
+.wrap:hover .uot-back{
+	transform: translateZ(-200px);
+}
+.wrap:hover .uot-left{
+	transform: rotateY(90deg) translateZ(200px);
+}
+.wrap:hover .uot-right{
+	transform: rotateY(-90deg) translateZ(200px);
+}
+.wrap:hover .uot-top{
+	transform: rotateX(90deg) translateZ(200px);
+}
+.wrap:hover .uot-bottom{
+	transform: rotateX(-90deg) translateZ(200px);
+}
+
+
+html i{
+	width: 1px;
+	position: absolute;
+	left: 20px;
+	top: 20px;
+	background-color:blueviolet;
+	animation: line 2s linear infinite;
+}	
+@keyframes line{
+	from{
+		transform: translateY(0) ;
+	}
+	to{
+		transform: translateY(80vh) ;
+	}
+}
